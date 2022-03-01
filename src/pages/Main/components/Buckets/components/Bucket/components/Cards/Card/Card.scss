@@ -1,0 +1,33 @@
+.Container {
+  padding: $offsetTiny;
+  background-color: $color_10;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow_1;
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .CardTypesWrap {
+    display: flex;
+    gap: $offsetMin;
+    flex-wrap: wrap;
+    margin: 0 $offsetMin $offsetMin 0;
+
+    .CardType {
+      display: inline-block;
+      padding: $offsetMinBase * 2 $offsetTiny;
+      color: $color_10;
+      font-weight: bold;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow_4;
+    }
+  }
+
+  .Content {
+    color: $color19_txt_semi;
+    font-size: $fontSmall;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,29 @@
+.Container {
+  display: flex;
+  gap: $offsetSmall;
+  flex-wrap: wrap;
+  margin: 0 $offsetMin $offsetMin 0;
+  padding: $offsetMinBase * 2 0 $offsetSmall;
+
+  .CardTypeBtn {
+    &.Selected,
+    &:hover {
+      .CardType {
+        box-shadow: $boxShadow_2;
+        border-bottom: 0.1rem solid $color_5;
+      }
+    }
+  }
+
+  .CardType {
+    display: inline-block;
+    padding: $offsetMin $offsetTiny;
+    color: $color_10;
+    font-size: $fontSmall;
+    font-weight: bold;
+    border-radius: $borderRadius;
+    border-bottom: 0.1rem solid transparent;
+    box-shadow: $boxShadow_4;
+    transition: all $transitionFast ease-in-out;
+  }
+}

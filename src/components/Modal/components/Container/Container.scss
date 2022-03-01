@@ -1,0 +1,50 @@
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color_1, 0.4);
+  animation: growBox $transitionNormal;
+
+  &.ContainerClose {
+    animation: shrinkBox $transitionNormal;
+  }
+}
+
+.Content {
+  position: relative;
+  overflow: hidden;
+  background-color: $color_10;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow_3;
+
+  .CloseIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes growBox {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrinkBox {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,30 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 38rem;
+  padding: $offsetXL $offsetXL $offsetXXL $offsetXL;
+  background-color: $color_10;
+
+  .Header {
+    display: flex;
+    align-items: center;
+    gap: $offsetSmall;
+    margin-bottom: $offsetLarge;
+
+    .HeaderTxt {
+      font-size: $fontXXL;
+    }
+  }
+
+  .ButtonsGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $offsetMedium;
+    margin-top: $offsetXXL;
+
+    &.Center {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.Container {
+  display: inline-block;
+  width: 100%;
+
+  .Input {
+    width: 100%;
+    height: 4rem;
+    padding: 0 $offsetSmall;
+    line-height: $line-height;
+    overflow: hidden;
+    color: $color17_txt;
+    font-size: $fontLarge;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: $color_10;
+    border: 0.1rem solid $color_8;
+    border-radius: $borderRadius;
+    transition: all $transitionFast ease-in-out;
+    outline: none;
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::placeholder {
+      color: $color_6;
+    }
+
+    &:hover {
+      border-color: $color_9;
+    }
+
+    &.Focus {
+      border-color: $color_9;
+      box-shadow: $boxShadow_3;
+    }
+
+    &.Disabled {
+      color: $color_3;
+      border: 0.1rem dashed $color_3;
+      cursor: not-allowed;
+    }
+  }
+}

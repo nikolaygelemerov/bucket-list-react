@@ -1,0 +1,96 @@
+{
+  "name": "bucket-list",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "react",
+    "typescript",
+    "webpack"
+  ],
+  "license": "ISC",
+  "author": "Nikolay <deanhalluk@gmail.com>",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "dist:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "Bucket List",
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category": "Utility",
+      "files": [
+        "dist/**/*",
+        "package.json",
+        "main.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.5",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-react": "7.16.7",
+    "@babel/preset-typescript": "7.16.7",
+    "@babel/runtime": "^7.17.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.4",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "5.12.1",
+    "@typescript-eslint/parser": "5.12.1",
+    "@webpack-cli/serve": "1.6.1",
+    "autoprefixer": "10.4.2",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "9.2.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "6.6.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "electron": "11.5.0",
+    "electron-builder": "^22.11.7",
+    "electron-reload": "^2.0.0-alpha.1",
+    "eslint": "8.10.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "8.4.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "4.2.1-alpha-00ced1e2b-20211102",
+    "fork-ts-checker-webpack-plugin": "7.2.1",
+    "html-loader": "3.1.0",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.5.3",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "postcss": "8.4.7",
+    "postcss-loader": "6.2.1",
+    "prettier": "2.5.1",
+    "react-refresh": "0.11.0",
+    "sass": "1.49.9",
+    "sass-loader": "12.6.0",
+    "sass-resources-loader": "2.2.4",
+    "terser-webpack-plugin": "5.3.1",
+    "typescript": "4.5.5",
+    "typescript-plugin-css-modules": "3.4.0",
+    "typings-for-css-modules-loader": "1.7.0",
+    "webpack": "5.69.1",
+    "webpack-bundle-analyzer": "4.5.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.7.4",
+    "worker-loader": "3.0.8"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}

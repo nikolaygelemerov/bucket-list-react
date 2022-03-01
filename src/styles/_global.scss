@@ -1,0 +1,9 @@
+:global(#root) {
+  position: relative;
+  z-index: $zIndex_1;
+}
+
+:global(#modal) {
+  position: relative;
+  z-index: $zIndex_2;
+}

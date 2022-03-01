@@ -1,0 +1,68 @@
+.Container {
+  position: relative;
+  display: inline-block;
+  transition: box-shadow $transitionNormal ease-in-out;
+
+  &:hover {
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow_4;
+  }
+
+  .Dots {
+    display: flex;
+    gap: $offsetMin;
+    padding: $offsetMinBase * 2;
+
+    .Dot {
+      display: inline-block;
+      width: $offsetMin;
+      height: $offsetMin;
+      border-radius: 50%;
+      background-color: $color18_txt_light;
+    }
+  }
+
+  .List {
+    position: absolute;
+    top: $offsetMedium;
+    right: 0;
+    z-index: 1;
+    padding: $offsetSmall;
+    background-color: $color_10;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow_3;
+
+    &.Open {
+      animation: growBox 300ms;
+
+      @keyframes growBox {
+        from {
+          transform: scale(0);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &.Close {
+      transform: scale(0);
+      animation: shrinkBox 300ms;
+
+      @keyframes shrinkBox {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(0);
+        }
+      }
+    }
+
+    .ListItem:not(:last-child) {
+      padding-bottom: $offsetSmall;
+    }
+  }
+}

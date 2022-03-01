@@ -1,0 +1,113 @@
+$recourcePath: "/src/assets";
+
+//  colors:
+$color_1: #2c2e2b;
+$color_2: #f2951f;
+$color_3: #bfbebf;
+$color_4: #accc58;
+$color_5: #ebf3d9;
+$color_6: #807f81;
+$color_7: #80be4c;
+$color_8: #595c5f;
+$color_9: #497bb7;
+$color_10: #ffffff;
+
+$color_11_error: #eb6161;
+$color_12_error: #c42626;
+
+$color_13_grid: #d8d8d8;
+
+$color14_success: #1c9c38;
+
+$color15_bkg: #8dbae4;
+$color16_bkg_light: #ebecf0;
+$color17_txt: #141729;
+$color18_txt_light: #6a737e;
+$color19_txt_semi: #494f5d;
+
+$color_type_Achieved: #5bba59;
+$color_type_Next: #ebda02;
+$color_type_Risk: #ff9a13;
+$color_type_Missed: #f45046;
+$color_type_Progress: #c974df;
+$color_type_Track: #0b75bc;
+$color_type_Tip: #03bdef;
+$color_type_Planning: #fb7bc9;
+
+// borders:
+$borderRadius: 0.4rem;
+
+// box-shadows:
+$boxShadow_1: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+$boxShadow_2: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+$boxShadow_3: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+$boxShadow_4: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+// fonts-sizes:
+$fontXS: 1rem;
+$fontSmall: 1.2rem;
+$fontMedium: 1.4rem;
+$fontLarge: 1.6rem;
+$fontXL: 1.8rem;
+$fontXXL: 2rem;
+$fontXXXL: 3rem;
+
+// line-heights:
+$line-height: 1.6rem;
+
+// offsets:
+$offsetMinBase: 0.1rem;
+$offsetMin: 0.4rem;
+$offsetTiny: 0.8rem;
+$offsetSmall: 1.2rem;
+$offsetMedium: 1.6rem;
+$offsetLarge: 2.4rem;
+$offsetXL: 3.2rem;
+$offsetXXL: 4rem;
+$offsetXXXL: 4.4rem;
+
+// transitions:
+$transitionFast: 200ms;
+$transitionNormal: 300ms;
+$transitionSlow: 500ms;
+
+// root
+// modal
+$zIndex_1: 1;
+$zIndex_2: 2;
+
+:export {
+  color_1: $color_1;
+  color_2: $color_2;
+  color_3: $color_3;
+  color_4: $color_4;
+  color_5: $color_5;
+  color_6: $color_6;
+  color_7: $color_7;
+  color_8: $color_8;
+  color_9: $color_9;
+  color_10: $color_10;
+  color_11_error: $color_11_error;
+  color_12_error: $color_12_error;
+  color_13_grid: $color_13_grid;
+  color14_success: $color14_success;
+  color15_bkg: $color15_bkg;
+  color16_bkg_light: $color16_bkg_light;
+  color17_txt: $color17_txt;
+  color18_txt_light: $color18_txt_light;
+  color19_txt_semi: $color19_txt_semi;
+  color_type_Achieved: $color_type_Achieved;
+  color_type_Next: $color_type_Next;
+  color_type_Risk: $color_type_Risk;
+  color_type_Missed: $color_type_Missed;
+  color_type_Progress: $color_type_Progress;
+  color_type_Track: $color_type_Track;
+  color_type_Tip: $color_type_Tip;
+  color_type_Planning: $color_type_Planning;
+  recourcePath: $recourcePath;
+}

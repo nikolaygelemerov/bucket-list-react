@@ -1,0 +1,40 @@
+.AddBucketBtnWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: $offsetTiny;
+
+  .AddBucketBtn {
+    display: flex;
+    align-items: center;
+    gap: $offsetMin;
+    padding: $offsetMin $offsetSmall;
+    margin-bottom: $offsetMin;
+    color: $color18_txt_light;
+    font-size: $fontSmall;
+    background-color: $color16_bkg_light;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow_4;
+    transition: all $transitionFast ease-in-out;
+
+    &:hover {
+      box-shadow: $boxShadow_2;
+    }
+  }
+}
+
+.BucketsWrap {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  .Buckets {
+    display: flex;
+    align-items: flex-start;
+    gap: $offsetSmall;
+  }
+}

@@ -1,0 +1,23 @@
+# dependencies:
+node_modules
+coverage
+
+# ide:
+.idea
+.vscode
+
+# built code
+dist
+out
+
+# logs
+yarn-error.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+

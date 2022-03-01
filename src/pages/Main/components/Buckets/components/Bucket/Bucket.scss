@@ -1,0 +1,49 @@
+.Container {
+  display: flex;
+  flex: 0 0 24rem;
+  flex-direction: column;
+  gap: $offsetSmall;
+  padding: calc($offsetSmall - 0.2rem) calc($offsetTiny - 0.2rem);
+  background-color: $color16_bkg_light;
+  border: 0.2rem solid $color16_bkg_light;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow_1;
+  box-sizing: border-box;
+
+  &.DraggingBucket {
+    border: 0.2rem dashed $color_6;
+  }
+
+  &.DraggingCard {
+    border: 0.2rem dashed $color_2;
+  }
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: $offsetMin;
+  }
+
+  .AddCardBtnWrap {
+    display: flex;
+    justify-content: flex-start;
+
+    .AddCardBtn {
+      display: flex;
+      align-items: center;
+      gap: $offsetMin;
+      padding: $offsetMin $offsetSmall;
+      margin-bottom: $offsetMin;
+      color: $color18_txt_light;
+      font-size: $fontSmall;
+      background-color: $color16_bkg_light;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow_4;
+      transition: all $transitionFast ease-in-out;
+
+      &:hover {
+        box-shadow: $boxShadow_2;
+      }
+    }
+  }
+}

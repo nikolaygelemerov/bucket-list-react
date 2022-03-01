@@ -1,0 +1,16 @@
+.Container {
+  display: inline-block;
+  height: 4.2rem;
+  padding: 0 $offsetLarge;
+  color: $color_10;
+  font-size: $fontLarge;
+  font-weight: bold;
+  text-align: center;
+  background-color: $color_8;
+  border-radius: $borderRadius;
+  transition: all $transitionFast ease-in-out;
+
+  &:hover {
+    box-shadow: $boxShadow_2;
+  }
+}
