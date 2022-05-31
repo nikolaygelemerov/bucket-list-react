@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
 import {
   DependencyList,
@@ -11,46 +10,32 @@ import {
   useReducer
 } from 'react';
 
-interface IState {
-  [key: string]: unknown;
-}
-
-interface IAction {
-  type: unknown;
-  payload: unknown;
-}
-
-interface IActionsValue {
-  [key: string]: (payload: unknown) => void;
-}
-
-type TReducer = (prevState: IState, action: IAction) => IState;
-
-export const useContextReducer = ({
+export const useContextReducer = <T, R, M>({
   actionTypes,
   initialState,
   reducer
 }: {
-  actionTypes: { [key: string]: unknown };
-  initialState: any;
-  reducer: any;
+  actionTypes: { [key: string]: M };
+  initialState: T;
+  reducer: (state: T, action: R) => T;
 }): {
   value: {
-    state: any;
+    state: T;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     actions: any;
   };
 } => {
-  const [state, dispatch] = useReducer(reducer as TReducer, initialState as IState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const newActions = useMemo(
     () =>
       Object.keys(actionTypes).reduce((accum, actionName) => {
-        accum[actionName] = (payload: unknown) => {
-          dispatch({ payload, type: actionTypes[actionName] });
+        accum[actionName] = (payload) => {
+          dispatch({ payload, type: actionTypes[actionName] } as unknown as R);
         };
 
         return accum;
-      }, {} as IActionsValue),
+      }, {} as { [key: string]: (payload: unknown) => void }),
 
     [actionTypes]
   );
@@ -137,3 +122,4 @@ export const useIsMounted = () => {
 
   return mounted;
 };
+

@@ -153,9 +153,7 @@ const reducer = (state: IInitialState, action: TAction): IInitialState => {
   }
 };
 
-export const BucketsContext = createContext(
-  initialContextState as unknown as { actions: IActions; state: IInitialState }
-);
+export const BucketsContext = createContext(initialContextState);
 
 export const BucketsProvider: FC<{
   children: ReactNode;

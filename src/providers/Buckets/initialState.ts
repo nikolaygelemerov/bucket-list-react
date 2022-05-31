@@ -128,6 +128,6 @@ export const initialContextState = {
     editCard: () => {
       throw new Error('No Buckets Provider');
     }
-  },
+  } as unknown as IActions,
   state: initialState
 };
